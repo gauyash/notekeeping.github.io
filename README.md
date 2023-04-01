@@ -2,7 +2,7 @@
 Built a simple and minimalistic note taking application
 
 
-#Tech Used
-HTML
-CSS
-vanilla JS
+# Tech Used
+1) HTML
+2) CSS
+3) vanilla JS
