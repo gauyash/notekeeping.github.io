@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Nunito:ital@1&family=Playball&family=Ubuntu:wght@400;500;700&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/cursed-timer-ulil');
+                
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --para:#777;
+    --one:#283044;
+    --two:#78a1bb;
+    --three:#ebf5ee;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1{
+    color: var(--black);
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+
+h2{
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+p{
+    color: var(--para);
+    line-height: 1.6;
+    font-size: 1.6rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+.section{
+    padding: 9rem 0;
+}
+
+.container{
+    max-width: 110rem !important;
+    margin: 0 auto;
+} 
+
+
+body{
+    background-color: whitesmoke;
+    transition: filter 200ms linear;    
+    overflow-x: hidden;
+}
+
+
+.grid{
+    display: grid;
+}
+
+.grid-two{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid-three{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.grid-four{
+    grid-template-columns: repeat(4,1fr);
+}
+
+.grid-seven{
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+}
+
+
+
+
+
+
+
+/* HEADER */
+
+
+
+header{
+    background-color: #987284;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+.logo{
+    width: 4rem;
+}
+
+
+.logo-text{
+    color: white;
+    font-size: 2.3rem;
+}
+
+
+
+/* HEADER */
+
+
+
+
+
+/* ADD-NOTE */
+
+
+
+.add-note-box{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+ 
+.add-note-row{
+    display: flex;
+    align-items: center;
+    /* margin: 0.4rem 1.5rem; */
+    gap: 1.5rem;
+    transition: width 600ms ease-in-out;
+    position: relative;
+    width: 15rem;
+    cursor: pointer;
+    border-radius: 55rem;
+    top: 12px;
+}
+
+.add-note-row p{
+    /* position: absolute; */
+    padding-right: 1rem;
+    font-size: 1.3rem;
+    color: black;
+    /* right: 0; */
+}
+
+.add-note-row:hover {
+    width: 16rem;
+    background-color: #987284;
+}
+
+.add-note-row:hover .arrow-btn{
+    /* width: 20rem; */
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+
+.add-note-row:hover p{
+    color: white;
+}
+
+.arrow-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #987284;
+    border-radius: 55rem;
+    /* padding: 1.3rem; */
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.arrow-btn i{
+    color: white;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+/* ADD-NOTE */
+
+
+
+
+
+/* NOTES-AREA */
+
+
+.add-note-bar{
+    text-align: center;
+    padding: 4rem 0 6rem;
+}
+
+
+.add-note-bar-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 50rem;
+    height: 4rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 30%);
+    background-color: white;
+    cursor: pointer;
+    transition: height 400ms ease-in-out;
+}
+
+.expand{
+    height: auto;
+}
+
+.expand .add-note-row{
+    margin: 0.4rem 1.5rem;
+    top: 0;
+}
+
+
+
+.add-note-bar-row input,
+.add-note-bar-row textarea{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 1.6rem;
+    border: none;
+    resize: none;
+    overflow: hidden;
+    padding: 1.5rem;
+
+}
+
+
+
+.notes-area{
+    padding: 2rem 0;
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+
+.note{
+    background-color: white;
+    height: 25rem;
+    width: 50rem;
+    padding: 1.5rem;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 10%);
+}
+
+
+
+.options{
+    padding-bottom: 1rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: end;
+    gap: 1.5rem;
+}
+
+.options i{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.close-btn i{
+    color: rgba(255, 0, 0, 0.715);
+}
+
+.tick-btn i{
+    color: #987284;
+}
+
+#title{
+    color: black;
+    font-weight: 500;    
+}
+
+#content{
+    color: #444;
+}
+
+.note .note-title{
+    width: 100%;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    color: black;
+    font-weight: 500;  
+    resize: none;
+    overflow: hidden;
+}
+
+.note .note-content{
+    overflow: hidden;
+    color: #444;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 72%;
+    outline: none;
+    border: none;
+    resize: none;
+    line-height: 1.6;
+}
+
+
+
+.notes-area-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+
+
+/* NOTES-AREA */
+
+
+
+
+
+
+
+
+
+
+
+/* pop-up */
+
+.pop-up{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.active{
+    display: block;
+}
+
+
+.pop-up .add-note-bar-row{
+    height: auto;   
+}
+
+
+.pop-up .add-note-row{
+    margin: 0.4rem 1.5rem;
+    top: 0;
+}
+
+
+.btn{
+    text-align: right;
+    margin-right: 1rem;
+}
+
+
+.btn-close{
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background-color: transparent;
+    transition: background-color 200ms ease-in-out;
+}
+
+.btn-close p{
+    font-size: 1.4rem;
+    color: #000;
+    
+}
+
+.btn-close:hover{
+    background-color: whitesmoke;
+}
+
+
+
+.add-blur header,
+.add-blur section{
+    filter: blur(7px);
+}
+
+
+
+
+
+
+
+/* pop-up */
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media(max-width:514px){
+    .add-note-bar-row{
+        width: 33rem;
+    }
+
+    .note{
+        width: 35rem;
+    }
+}
+
+
+
+
+/* MEDIA QUERIES */
+
